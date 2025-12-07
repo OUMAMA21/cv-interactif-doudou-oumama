@@ -1,0 +1,47 @@
+
+:root{
+  --bg:#0A0A0A;
+  --text:#D9D9D9;
+  --bordeaux:#800020;
+  --muted:#9a9a9a;
+}
+*{box-sizing:border-box}
+body{background:var(--bg); color:var(--text); font-family:'Lora', serif; margin:0; padding-top:80px;}
+a { color:var(--bordeaux); text-decoration:none; }
+.navbar{background:transparent; padding:0.6rem 0;}
+.navbar .navbar-brand{font-family:'Playfair Display', serif; color:var(--bordeaux); font-weight:700; letter-spacing:1px;}
+.navbar .nav-link{color:var(--text); text-transform:uppercase; font-size:0.85rem; margin-left:1rem;}
+.navbar .nav-link:hover{color:var(--bordeaux);}
+
+.hero{padding:80px 20px 40px; text-align:center;}
+.avatar-wrap{display:flex; justify-content:center; margin-bottom:10px;}
+.avatar{width:180px; height:180px; border-radius:50%; border:5px solid rgba(128,0,32,0.9); object-fit:cover; box-shadow:0 10px 30px rgba(0,0,0,0.6);}
+.intro{font-family:'Lora', serif; text-transform:uppercase; color:var(--muted); margin:0;}
+.name{font-family:'Playfair Display', serif; color:var(--bordeaux); font-size:3rem; margin:8px 0; letter-spacing:2px; text-transform:uppercase;}
+.role{font-family:'Playfair Display', serif; color:var(--text); margin-bottom:18px; text-transform:uppercase;}
+
+.btn-outline{border:1px solid rgba(128,0,32,0.8); color:var(--text); padding:10px 18px; border-radius:8px;}
+.btn-outline:hover{background:rgba(128,0,32,0.08); color:var(--bordeaux); border-color:var(--bordeaux);}
+
+.sections{max-width:1000px; margin:40px auto; padding:0 15px;}
+.section{padding:30px 0; border-bottom:1px solid rgba(255,255,255,0.02);}
+.section h2{font-family:'Playfair Display', serif; text-transform:uppercase; color:var(--text); letter-spacing:1.5px;}
+.skills-list{list-style:none; padding:0; margin-top:12px;}
+.skills-list li{padding:6px 0; color:var(--muted); text-transform:uppercase; letter-spacing:1px;}
+
+.job-title{color:var(--bordeaux); text-transform:uppercase; font-weight:700;}
+.job-year{float:right; color:var(--muted); font-weight:700;}
+
+footer{border-top:1px solid rgba(255,255,255,0.03); margin-top:30px; color:var(--muted);}
+
+/* reveal animation */
+.reveal{opacity:0; transform:translateY(18px); transition:all 700ms ease-out;}
+.reveal.show{opacity:1; transform:none;}
+
+/* Responsive */
+@media(max-width:767px){
+  .name{font-size:2rem;}
+  .avatar{width:140px;height:140px;}
+  .btn-outline{padding:8px 14px;}
+  .job-year{float:none; display:block; margin-top:8px;}
+}
